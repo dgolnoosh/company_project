@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Context>
+	<Resource name="jdbc/myds"
+			  auth="Container"
+			  type="javax.sql.DataSource"
+			  username="app"
+			  password="goli123"
+			  driverClassName="oracle.jdbc.driver.OracleDriver"
+			  url="jdbc:oracle:thin:@192.168.210.212:1521:orcl"
+			  maxTotal="30"
+			  maxIdle="10"
+	/>
+</Context>

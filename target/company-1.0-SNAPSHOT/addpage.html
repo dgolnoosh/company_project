@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        .green {
+            color: GREEN;
+        }
+
+        .red {
+            color: RED;
+        }
+    </style>
+    <meta name="viewport" content="width=device-width" />
+    <script type="text/javascript"
+            src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js">
+    </script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('#ajaxBtn').click(function(){
+                $.ajax({
+                    url: "add",
+                    cache: false,
+                    success: function(text){
+                        if(text === "1"){
+                            $("p").addClass("green")
+                            $("p").append("Success");
+                        }else if(text === "0"){
+                            $("p").addClass("red")
+                            $("p").append("Not Successful");
+                        }
+                    }
+                });
+            });
+
+        });
+    </script>
+</head>
+<body>
+<input type="button" id="ajaxBtn" value="Send Ajax request" />
+<p>
+</p>
+</body>
+</html>
